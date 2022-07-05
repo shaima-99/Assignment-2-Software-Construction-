@@ -1,0 +1,28 @@
+
+@baseUrl = https://us-central1-pestatanglungstore.cloudfunctions.net/api
+
+### Getting the list of items in the store
+GET {{baseUrl}}/store
+
+###  Getting a item of given id
+GET {{baseUrl}}/store/0dbAWTs7T6KAgT73n7tv
+###  Create a new item
+POST {{baseUrl}}/store
+Content-Type: application/json
+
+{
+    "title": "ruler",
+    "quantity": 5
+}
+
+### Replace the entire fields of a given items
+PUT {{baseUrl}}/store/mHjdBAdltNP2biQduErt
+Content-Type: application/json
+
+{
+    "title": "A4 paper",
+    "quantity": 12
+}
+
+### Deleting a given items
+DELETE {{baseUrl}}/store/mHjdBAdltNP2biQduErt
